@@ -10,8 +10,8 @@ pip install streamlit folium streamlit-folium
 ```
 ---
 
-### To Run the App
-Go in the same directory as the git folder
+### Setup
+To run the App, go in the same directory as the git folder and execute
 ```
 streamlit run app.py
 ```
