@@ -5,26 +5,26 @@ import streamlit as st
 # Define the pages
 
 dashboard = st.Page(
-    page= "views/dashboard.py",
+    page= "pages/dashboard.py",
     title= "Dashboard",
     icon= ":material/home:",
     default= True
 )
 
 topology_viewer = st.Page(
-    page= "views/topology_viewer.py",
+    page= "pages/topology_viewer.py",
     title= "Topology Viewer",
     icon= ":material/map:" 
 )
 
 topology_estimator = st.Page(
-    page= "views/topology_estimator.py",
+    page= "pages/topology_estimator.py",
     title= "Topology Estimator",
     icon= ":material/hub:" 
 )
 
 customer_voltages = st.Page(
-    page= "views/customer_voltages.py",
+    page= "pages/customer_voltages.py",
     title= "Customer Voltages",
     icon= ":material/electric_bolt:" 
 )
