@@ -1,0 +1,262 @@
+{
+  "LVNetwork": {
+    "Circuit": {
+      "name": "Realistic_LV_Circuit",
+      "basekv": 0.4,
+      "pu": 1.0,
+      "phases": 3,
+      "bus1": "sourcebus"
+    },
+    "Transformer": {
+      "name": "LV_Transformer",
+      "kV": 0.4,
+      "kVA": 150,
+      "phases": 3,
+      "XHL": 0.02,
+      "windings": 2
+    },
+    "Lines": [
+      {
+        "name": "Line1",
+        "bus1": "Bus0",
+        "bus2": "Bus15",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.0177702217152416,
+        "X1": 0.02560143090108305
+      },
+      {
+        "name": "Line2",
+        "bus1": "Bus15",
+        "bus2": "Bus14",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.008516582409699384,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line3",
+        "bus1": "Bus14",
+        "bus2": "Bus10",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.04765889065241922,
+        "X1": 0.008466069504099335
+      },
+      {
+        "name": "Line4",
+        "bus1": "Bus10",
+        "bus2": "Bus1",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.0020454324565415878,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line5",
+        "bus1": "Bus10",
+        "bus2": "Bus13",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.029034241310128613,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line6",
+        "bus1": "Bus13",
+        "bus2": "Bus12",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.0001,
+        "X1": 0.07844681781595662
+      },
+      {
+        "name": "Line7",
+        "bus1": "Bus12",
+        "bus2": "Bus11",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.0001,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line8",
+        "bus1": "Bus11",
+        "bus2": "Bus2",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.05034304769118448,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line9",
+        "bus1": "Bus11",
+        "bus2": "Bus3",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.06465307866479483,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line10",
+        "bus1": "Bus15",
+        "bus2": "Bus16",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.0001,
+        "X1": 0.012690234646504109
+      },
+      {
+        "name": "Line11",
+        "bus1": "Bus16",
+        "bus2": "Bus4",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.03893135692583455,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line12",
+        "bus1": "Bus16",
+        "bus2": "Bus5",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.041954096709656254,
+        "X1": 0.043915622953893806
+      },
+      {
+        "name": "Line13",
+        "bus1": "Bus14",
+        "bus2": "Bus6",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.0001,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line14",
+        "bus1": "Bus12",
+        "bus2": "Bus7",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.05252800432341741,
+        "X1": 0.08496572059417673
+      },
+      {
+        "name": "Line15",
+        "bus1": "Bus13",
+        "bus2": "Bus8",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.0001,
+        "X1": 0.0001
+      },
+      {
+        "name": "Line16",
+        "bus1": "Bus14",
+        "bus2": "Bus9",
+        "length_km": 1,
+        "phases": 3,
+        "R1": 0.014547038826546788,
+        "X1": 0.05046714617572817
+      }
+    ],
+    "Loads": [
+      {
+        "customer": "Load1",
+        "bus": "Bus1",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      },
+      {
+        "customer": "Load2",
+        "bus": "Bus2",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      },
+      {
+        "customer": "Load3",
+        "bus": "Bus3",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      },
+      {
+        "customer": "Load4",
+        "bus": "Bus4",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      },
+      {
+        "customer": "Load5",
+        "bus": "Bus5",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      },
+      {
+        "customer": "Load6",
+        "bus": "Bus6",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      },
+      {
+        "customer": "Load7",
+        "bus": "Bus7",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      },
+      {
+        "customer": "Load8",
+        "bus": "Bus8",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      },
+      {
+        "customer": "Load9",
+        "bus": "Bus9",
+        "phases": 1,
+        "kV": 0.23094,
+        "kVAR": 0.15,
+        "pf": 0.95,
+        "Vminpu": 0.8,
+        "Vmaxpu": 1.5
+      }
+    ]
+  },
+  "SimulationParameters": {
+    "mode": "daily",
+    "stepsize": "30m",
+    "duration_hours": 24
+  }
+}

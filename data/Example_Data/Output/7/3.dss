@@ -1,0 +1,112 @@
+Clear
+New Circuit.Realistic_LV_Circuit basekV=0.4 pu=1.0 phases=3 bus1=sourcebus
+
+New Line.SourceToBus0 Bus1=sourcebus Bus2=Bus0 Phases=3 R1=0.01 X1=0.05 Length=0.0001 Units=m
+
+! Line definitions
+New Line.Line1 bus1=Bus0 bus2=Bus46 phases=3 length=1 units=km rmatrix=[0.09353353 | 0 0.09353353 | 0 0 0.09353353] xmatrix=[0.00936353 | 0 0.00936353 | 0 0 0.00936353]
+New Line.Line2 bus1=Bus46 bus2=Bus38 phases=3 length=1 units=km rmatrix=[0.00582735 | 0 0.00582735 | 0 0 0.00582735] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line3 bus1=Bus38 bus2=Bus39 phases=3 length=1 units=km rmatrix=[0.04908512 | 0 0.04908512 | 0 0 0.04908512] xmatrix=[0.01562301 | 0 0.01562301 | 0 0 0.01562301]
+New Line.Line4 bus1=Bus39 bus2=Bus40 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line5 bus1=Bus40 bus2=Bus41 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line6 bus1=Bus41 bus2=Bus42 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line7 bus1=Bus42 bus2=Bus43 phases=3 length=1 units=km rmatrix=[0.04881982 | 0 0.04881982 | 0 0 0.04881982] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line8 bus1=Bus43 bus2=Bus44 phases=3 length=1 units=km rmatrix=[0.03640070 | 0 0.03640070 | 0 0 0.03640070] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line9 bus1=Bus44 bus2=Bus45 phases=3 length=1 units=km rmatrix=[0.01008792 | 0 0.01008792 | 0 0 0.01008792] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line10 bus1=Bus45 bus2=Bus1 phases=3 length=1 units=km rmatrix=[0.23947063 | 0 0.23947063 | 0 0 0.23947063] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line11 bus1=Bus45 bus2=Bus2 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line12 bus1=Bus41 bus2=Bus3 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.01234648 | 0 0.01234648 | 0 0 0.01234648]
+New Line.Line13 bus1=Bus42 bus2=Bus4 phases=3 length=1 units=km rmatrix=[0.20703503 | 0 0.20703503 | 0 0 0.20703503] xmatrix=[0.14677585 | 0 0.14677585 | 0 0 0.14677585]
+New Line.Line14 bus1=Bus40 bus2=Bus5 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line15 bus1=Bus46 bus2=Bus54 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line16 bus1=Bus54 bus2=Bus53 phases=3 length=1 units=km rmatrix=[0.01312175 | 0 0.01312175 | 0 0 0.01312175] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line17 bus1=Bus53 bus2=Bus52 phases=3 length=1 units=km rmatrix=[0.02593590 | 0 0.02593590 | 0 0 0.02593590] xmatrix=[0.00885754 | 0 0.00885754 | 0 0 0.00885754]
+New Line.Line18 bus1=Bus52 bus2=Bus6 phases=3 length=1 units=km rmatrix=[0.07615309 | 0 0.07615309 | 0 0 0.07615309] xmatrix=[0.70526993 | 0 0.70526993 | 0 0 0.70526993]
+New Line.Line19 bus1=Bus38 bus2=Bus7 phases=3 length=1 units=km rmatrix=[0.06004598 | 0 0.06004598 | 0 0 0.06004598] xmatrix=[0.04730983 | 0 0.04730983 | 0 0 0.04730983]
+New Line.Line20 bus1=Bus46 bus2=Bus47 phases=3 length=1 units=km rmatrix=[0.06569431 | 0 0.06569431 | 0 0 0.06569431] xmatrix=[0.22903663 | 0 0.22903663 | 0 0 0.22903663]
+New Line.Line21 bus1=Bus47 bus2=Bus48 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00543944 | 0 0.00543944 | 0 0 0.00543944]
+New Line.Line22 bus1=Bus48 bus2=Bus49 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line23 bus1=Bus49 bus2=Bus8 phases=3 length=1 units=km rmatrix=[0.15481223 | 0 0.15481223 | 0 0 0.15481223] xmatrix=[0.02428511 | 0 0.02428511 | 0 0 0.02428511]
+New Line.Line24 bus1=Bus49 bus2=Bus9 phases=3 length=1 units=km rmatrix=[0.18568317 | 0 0.18568317 | 0 0 0.18568317] xmatrix=[0.03927929 | 0 0.03927929 | 0 0 0.03927929]
+New Line.Line25 bus1=Bus39 bus2=Bus10 phases=3 length=1 units=km rmatrix=[0.17265117 | 0 0.17265117 | 0 0 0.17265117] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line26 bus1=Bus45 bus2=Bus11 phases=3 length=1 units=km rmatrix=[0.06739425 | 0 0.06739425 | 0 0 0.06739425] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line27 bus1=Bus45 bus2=Bus12 phases=3 length=1 units=km rmatrix=[0.02777101 | 0 0.02777101 | 0 0 0.02777101] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line28 bus1=Bus52 bus2=Bus51 phases=3 length=1 units=km rmatrix=[0.00146258 | 0 0.00146258 | 0 0 0.00146258] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line29 bus1=Bus51 bus2=Bus50 phases=3 length=1 units=km rmatrix=[0.04505610 | 0 0.04505610 | 0 0 0.04505610] xmatrix=[0.16180157 | 0 0.16180157 | 0 0 0.16180157]
+New Line.Line30 bus1=Bus50 bus2=Bus34 phases=3 length=1 units=km rmatrix=[0.06373031 | 0 0.06373031 | 0 0 0.06373031] xmatrix=[0.05059088 | 0 0.05059088 | 0 0 0.05059088]
+New Line.Line31 bus1=Bus34 bus2=Bus13 phases=3 length=1 units=km rmatrix=[0.11791689 | 0 0.11791689 | 0 0 0.11791689] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line32 bus1=Bus53 bus2=Bus14 phases=3 length=1 units=km rmatrix=[0.10143170 | 0 0.10143170 | 0 0 0.10143170] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line33 bus1=Bus48 bus2=Bus15 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line34 bus1=Bus51 bus2=Bus16 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.02014871 | 0 0.02014871 | 0 0 0.02014871]
+New Line.Line35 bus1=Bus46 bus2=Bus37 phases=3 length=1 units=km rmatrix=[0.06278632 | 0 0.06278632 | 0 0 0.06278632] xmatrix=[0.13051072 | 0 0.13051072 | 0 0 0.13051072]
+New Line.Line36 bus1=Bus37 bus2=Bus17 phases=3 length=1 units=km rmatrix=[0.03254076 | 0 0.03254076 | 0 0 0.03254076] xmatrix=[0.23729237 | 0 0.23729237 | 0 0 0.23729237]
+New Line.Line37 bus1=Bus54 bus2=Bus18 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.21261421 | 0 0.21261421 | 0 0 0.21261421]
+New Line.Line38 bus1=Bus47 bus2=Bus19 phases=3 length=1 units=km rmatrix=[0.18151190 | 0 0.18151190 | 0 0 0.18151190] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line39 bus1=Bus44 bus2=Bus20 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line40 bus1=Bus44 bus2=Bus21 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line41 bus1=Bus34 bus2=Bus35 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line42 bus1=Bus35 bus2=Bus36 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line43 bus1=Bus36 bus2=Bus22 phases=3 length=1 units=km rmatrix=[0.02357809 | 0 0.02357809 | 0 0 0.02357809] xmatrix=[0.31510374 | 0 0.31510374 | 0 0 0.31510374]
+New Line.Line44 bus1=Bus53 bus2=Bus23 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line45 bus1=Bus50 bus2=Bus24 phases=3 length=1 units=km rmatrix=[0.12633627 | 0 0.12633627 | 0 0 0.12633627] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line46 bus1=Bus50 bus2=Bus25 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line47 bus1=Bus51 bus2=Bus26 phases=3 length=1 units=km rmatrix=[0.22803019 | 0 0.22803019 | 0 0 0.22803019] xmatrix=[0.23099019 | 0 0.23099019 | 0 0 0.23099019]
+New Line.Line48 bus1=Bus38 bus2=Bus27 phases=3 length=1 units=km rmatrix=[0.09037957 | 0 0.09037957 | 0 0 0.09037957] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line49 bus1=Bus43 bus2=Bus28 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line50 bus1=Bus52 bus2=Bus29 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line51 bus1=Bus37 bus2=Bus30 phases=3 length=1 units=km rmatrix=[0.21993125 | 0 0.21993125 | 0 0 0.21993125] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line52 bus1=Bus52 bus2=Bus31 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line53 bus1=Bus35 bus2=Bus32 phases=3 length=1 units=km rmatrix=[0.09363595 | 0 0.09363595 | 0 0 0.09363595] xmatrix=[0.40490800 | 0 0.40490800 | 0 0 0.40490800]
+New Line.Line54 bus1=Bus36 bus2=Bus33 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+
+! Load definitions
+New Load.Load1 bus1=Bus1 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load2 bus1=Bus2 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load3 bus1=Bus3 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load4 bus1=Bus4 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load5 bus1=Bus5 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load6 bus1=Bus6 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load7 bus1=Bus7 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load8 bus1=Bus8 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load9 bus1=Bus9 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load10 bus1=Bus10 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load11 bus1=Bus11 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load12 bus1=Bus12 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load13 bus1=Bus13 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load14 bus1=Bus14 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load15 bus1=Bus15 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load16 bus1=Bus16 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load17 bus1=Bus17 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load18 bus1=Bus18 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load19 bus1=Bus19 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load20 bus1=Bus20 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load21 bus1=Bus21 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load22 bus1=Bus22 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load23 bus1=Bus23 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load24 bus1=Bus24 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load25 bus1=Bus25 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load26 bus1=Bus26 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load27 bus1=Bus27 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load28 bus1=Bus28 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load29 bus1=Bus29 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load30 bus1=Bus30 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load31 bus1=Bus31 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load32 bus1=Bus32 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load33 bus1=Bus33 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+
+! Community Battery Lines
+New Line.Line.L_Bat1 bus1=Bus46 bus2=Bat1_Node phases=1 length=1.0 units=km r1=0.00400000 x1=0.00200000 enabled=false
+New Line.Line.L_Bat2 bus1=Bus45 bus2=Bat2_Node phases=1 length=1.0 units=km r1=0.00400000 x1=0.00200000 enabled=false
+
+! Community Battery Loads
+New load.Com_Bat1_phase1 phases=1 bus1=Bat1_Node.1 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat1_phase2 phases=1 bus1=Bat1_Node.2 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat1_phase3 phases=1 bus1=Bat1_Node.3 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat2_phase1 phases=1 bus1=Bat2_Node.1 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat2_phase2 phases=1 bus1=Bat2_Node.2 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat2_phase3 phases=1 bus1=Bat2_Node.3 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+
+! Simulation parameters
+Set VoltageBases=0.4
+CalcVoltageBases
+Solve

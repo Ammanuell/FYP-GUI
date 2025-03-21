@@ -1,11 +1,12 @@
 # FYP-GUI
 ### Dependencies:
 - Streamlit
-
+- Folium
+- Streamlit Folium
 
 To download:
 ```
-pip install streamlit 
+pip install streamlit, folium, stream-folium
 ```
 ---
 

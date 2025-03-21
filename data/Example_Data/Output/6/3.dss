@@ -1,0 +1,45 @@
+Clear
+New Circuit.Realistic_LV_Circuit basekV=0.4 pu=1.0 phases=3 bus1=sourcebus
+
+New Line.SourceToBus0 Bus1=sourcebus Bus2=Bus0 Phases=3 R1=0.01 X1=0.05 Length=0.0001 Units=m
+
+! Line definitions
+New Line.Line1 bus1=Bus0 bus2=Bus12 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line2 bus1=Bus12 bus2=Bus13 phases=3 length=1 units=km rmatrix=[0.00572930 | 0 0.00572930 | 0 0 0.00572930] xmatrix=[0.03423518 | 0 0.03423518 | 0 0 0.03423518]
+New Line.Line3 bus1=Bus13 bus2=Bus1 phases=3 length=1 units=km rmatrix=[0.03268347 | 0 0.03268347 | 0 0 0.03268347] xmatrix=[0.00572930 | 0 0.00572930 | 0 0 0.00572930]
+New Line.Line4 bus1=Bus13 bus2=Bus9 phases=3 length=1 units=km rmatrix=[0.04779884 | 0 0.04779884 | 0 0 0.04779884] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line5 bus1=Bus9 bus2=Bus2 phases=3 length=1 units=km rmatrix=[0.02277470 | 0 0.02277470 | 0 0 0.02277470] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line6 bus1=Bus9 bus2=Bus8 phases=3 length=1 units=km rmatrix=[0.01514123 | 0 0.01514123 | 0 0 0.01514123] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line7 bus1=Bus8 bus2=Bus3 phases=3 length=1 units=km rmatrix=[0.20872895 | 0 0.20872895 | 0 0 0.20872895] xmatrix=[0.00738292 | 0 0.00738292 | 0 0 0.00738292]
+New Line.Line8 bus1=Bus12 bus2=Bus11 phases=3 length=1 units=km rmatrix=[0.04461082 | 0 0.04461082 | 0 0 0.04461082] xmatrix=[0.03529094 | 0 0.03529094 | 0 0 0.03529094]
+New Line.Line9 bus1=Bus11 bus2=Bus10 phases=3 length=1 units=km rmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line10 bus1=Bus10 bus2=Bus4 phases=3 length=1 units=km rmatrix=[0.24228441 | 0 0.24228441 | 0 0 0.24228441] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line11 bus1=Bus11 bus2=Bus5 phases=3 length=1 units=km rmatrix=[0.05902485 | 0 0.05902485 | 0 0 0.05902485] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line12 bus1=Bus10 bus2=Bus6 phases=3 length=1 units=km rmatrix=[0.01215686 | 0 0.01215686 | 0 0 0.01215686] xmatrix=[0.00010000 | 0 0.00010000 | 0 0 0.00010000]
+New Line.Line13 bus1=Bus8 bus2=Bus7 phases=3 length=1 units=km rmatrix=[0.19319711 | 0 0.19319711 | 0 0 0.19319711] xmatrix=[0.16670695 | 0 0.16670695 | 0 0 0.16670695]
+
+! Load definitions
+New Load.Load1 bus1=Bus1 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load2 bus1=Bus2 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load3 bus1=Bus3 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load4 bus1=Bus4 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load5 bus1=Bus5 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load6 bus1=Bus6 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+New Load.Load7 bus1=Bus7 phases=1 kv=0.23094 kvar=0.15 pf=0.95 vminpu=0.8 vmaxpu=1.5
+
+! Community Battery Lines
+New Line.Line.L_Bat1 bus1=Bus12 bus2=Bat1_Node phases=1 length=1.0 units=km r1=0.00400000 x1=0.00200000 enabled=false
+New Line.Line.L_Bat2 bus1=Bus8 bus2=Bat2_Node phases=1 length=1.0 units=km r1=0.00400000 x1=0.00200000 enabled=false
+
+! Community Battery Loads
+New load.Com_Bat1_phase1 phases=1 bus1=Bat1_Node.1 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat1_phase2 phases=1 bus1=Bat1_Node.2 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat1_phase3 phases=1 bus1=Bat1_Node.3 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat2_phase1 phases=1 bus1=Bat2_Node.1 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat2_phase2 phases=1 bus1=Bat2_Node.2 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+New load.Com_Bat2_phase3 phases=1 bus1=Bat2_Node.3 pf=1 conn=w kv=0.23 kw=0 Vminpu=0.94 Vmaxpu=1.10 model=1 status=variable enabled=False
+
+! Simulation parameters
+Set VoltageBases=0.4
+CalcVoltageBases
+Solve
