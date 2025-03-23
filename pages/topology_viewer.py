@@ -14,7 +14,7 @@ st.set_page_config(layout="wide")
 st.markdown("# Topology Viewer")
 
 
-node_locations, types = load_network_from_file(6)
+node_locations, types, edges, impedances = load_network_from_file(8)
 
 
 if "last_object_clicked" not in st.session_state:
@@ -32,29 +32,34 @@ if "center" not in st.session_state:
 # Map
 m = folium.Map(location=node_locations[0], zoom_start=17, width=MAP_WIDTH, height=MAP_HEIGHT)
 
-zoom = st.session_state["zoom"]
 
-# Map circles
+
+# Overlay Network on Map
 fg = folium.FeatureGroup(name="Houses")
-
+zoom = st.session_state["zoom"]
 if zoom > 15: # Show all full networks within the bounding box
-    
+    # Nodes
     for i in range(len(node_locations)):
 
         if types[i] == 0:
             colour = "red"
+            rad = 3
         elif types[i] == 1:
             colour = "black"
+            rad = 2
         elif types[i] == 2:
             colour = "cyan"
+            rad = 4
         elif types[i] == 3:
             colour = "lightgreen"
+            rad = 3
         elif types[i] == 4:
             colour = "blue"
+            rad = 3
 
         fg.add_child(folium.Circle(
             location=node_locations[i],
-            radius=3,
+            radius=rad,
             fill=True,
             fill_opacity=1,
             opacity=1,
@@ -62,7 +67,21 @@ if zoom > 15: # Show all full networks within the bounding box
             color= "black",
             weight= 2,
             stroke= True if st.session_state["selected_node"] == i
-                        else False
+                        else False,
+            tooltip="Customer: {}".format(i)
+
+        ))
+    
+    # Edges
+    for i in range(len(edges)):
+        edge = [int(edges[i, 0]), int(edges[i, 1])]
+        imped = impedances[i]
+        fg.add_child(folium.PolyLine(
+            locations=[node_locations[edge[0]], node_locations[edge[1]]],
+            color="#000000",
+            weight=2,
+            opacity= 1, 
+            tooltip="Impedance: {} + {}j".format(np.round(imped[0],4), np.round(imped[1],4))
 
         ))
 else: # Show only transformers
@@ -80,6 +99,7 @@ map_data = st_folium(m,
 c1, c2 = st.columns(2)
 
 with c1:
+    st.empty()
     # Title
     "# Customer " + str(st.session_state["selected_node"])
 
