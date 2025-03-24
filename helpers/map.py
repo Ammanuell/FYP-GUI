@@ -4,3 +4,8 @@ def find_circle(lat, lon, locations):
          if locations[i][0] == location[0] and locations[i][1] == location[1]:
               closest_node = i
     return closest_node
+
+def zoom_to_line_weight(zoom):
+
+     weight = 25/zoom
+     return weight

@@ -3,12 +3,16 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from streamlit_folium import st_folium
-from helpers.map import find_circle
+from helpers.map import find_circle, zoom_to_line_weight
 from helpers.data import load_network_from_file
+from helpers.ui import remove_top_padding
 
-MAP_HEIGHT = 500
+MAP_HEIGHT = 650
 MAP_WIDTH = 1200
+
 st.set_page_config(layout="wide")
+remove_top_padding()
+
 
 # Title
 st.markdown("# Topology Viewer")
@@ -36,8 +40,8 @@ m = folium.Map(location=node_locations[0], zoom_start=17, width=MAP_WIDTH, heigh
 
 # Overlay Network on Map
 fg = folium.FeatureGroup(name="Houses")
-zoom = st.session_state["zoom"]
-if zoom > 15: # Show all full networks within the bounding box
+
+if st.session_state["zoom"] > 15: # Show all full networks within the bounding box
     # Nodes
     for i in range(len(node_locations)):
 
@@ -79,13 +83,24 @@ if zoom > 15: # Show all full networks within the bounding box
         fg.add_child(folium.PolyLine(
             locations=[node_locations[edge[0]], node_locations[edge[1]]],
             color="#000000",
-            weight=2,
+            weight=zoom_to_line_weight(st.session_state["zoom"]),
             opacity= 1, 
             tooltip="Impedance: {} + {}j".format(np.round(imped[0],4), np.round(imped[1],4))
 
         ))
 else: # Show only transformers
-    pass
+    fg.add_child(folium.Circle(
+            location=node_locations[0],
+            radius=200,
+            fill=True,
+            fill_opacity=0.4,
+            fillColor= "cyan",
+            color= "black",
+            weight= 2,
+            stroke= True,
+            tooltip="Network {}".format(0)
+
+        ))
 
 
 map_data = st_folium(m, 
