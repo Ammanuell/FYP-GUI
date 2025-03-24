@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 import numpy as np
 from pathlib import Path
@@ -7,7 +8,7 @@ parent_dir = Path(__file__).resolve().parent.parent
 
 DATA_PATH =  parent_dir / "data" / "Example_Data" / "Output"
 
-
+@st.cache_data
 def load_network_from_file(net_no):
 
     file_path = DATA_PATH / str(net_no)
@@ -36,3 +37,18 @@ def load_network_from_file(net_no):
     impedances = df[:,[2,3]]
     return locations, types, edges, impedances
 
+@st.cache_data
+def load_all_networks():
+    net_nodes = []
+    net_types = []
+    net_edges = []
+    net_edge_impedances = []
+    for i in range(6,10):
+        locations, types, edges, impedances = load_network_from_file(i)
+
+        net_nodes.append(locations)
+        net_types.append(types)
+        net_edges.append(edges)
+        net_edge_impedances.append(impedances)
+
+    return net_nodes, net_types, net_edges, net_edge_impedances
